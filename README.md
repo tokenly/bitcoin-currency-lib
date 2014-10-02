@@ -1,1 +1,1 @@
-The CurrencyLib component for UTipdMe.
+A simple bitcoin currency library.
