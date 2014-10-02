@@ -1,0 +1,1 @@
+The CurrencyLib component for UTipdMe.
