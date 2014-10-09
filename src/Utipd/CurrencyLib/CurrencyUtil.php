@@ -20,7 +20,7 @@ class CurrencyUtil
 
     public static function satoshisToNumber($satoshis, $places=null) {
         if (!strlen($satoshis)) { return $satoshis; }
-        if ($places === null) { $places = 7; }
+        if ($places === null) { $places = 8; }
         $out = number_format($satoshis / self::SATOSHI, $places);
         if (strpos($out, '.') !== false) {
             $out = rtrim($out, '0');
@@ -31,7 +31,7 @@ class CurrencyUtil
     }
 
     public static function satoshisToUnFormattedNumber($satoshis, $places=null) {
-        if ($places === null) { $places = 7; }
+        if ($places === null) { $places = 8; }
         $out = round($satoshis / self::SATOSHI, $places);
         return $out;
     } 
