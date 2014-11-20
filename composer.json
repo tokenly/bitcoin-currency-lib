@@ -1,5 +1,5 @@
 {
-    "name": "utipd/currency-lib",
+    "name": "tokenly/bitcoin-currency-lib",
     "description": "A simple bitcoin currency library",
     "type": "library",
     "license": "MIT",
