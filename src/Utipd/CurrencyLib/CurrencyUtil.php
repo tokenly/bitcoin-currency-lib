@@ -1,6 +1,6 @@
 <?php
 
-namespace Utipd\CurrencyLib;
+namespace Tokenly\CurrencyLib;
 
 use Exception;
 

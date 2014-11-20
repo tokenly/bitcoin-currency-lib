@@ -17,6 +17,6 @@
         "phpunit/phpunit": "~4"
     },
     "autoload": {
-        "psr-0": {"Utipd\\CurrencyLib": "src"}
+        "psr-0": {"Tokenly\\CurrencyLib": "src"}
     }
 }
