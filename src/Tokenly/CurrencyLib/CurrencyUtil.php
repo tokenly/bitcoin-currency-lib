@@ -14,11 +14,17 @@ class CurrencyUtil
 
     ////////////////////////////////////////////////////////////////////////
 
-    public static function numberToSatoshis($number) {
-        return intval(round($number * self::SATOSHI));
+    public static function valueToSatoshis($value) {
+        return intval(round($value * self::SATOSHI));
     }
 
-    public static function satoshisToNumber($satoshis, $places=null) {
+    public static function satoshisToValue($satoshis, $places=null) {
+        if ($places === null) { $places = 8; }
+        $out = round($satoshis / self::SATOSHI, $places);
+        return $out;
+    } 
+
+    public static function satoshisToFormattedString($satoshis, $places=null) {
         if (!strlen($satoshis)) { return $satoshis; }
         if ($places === null) { $places = 8; }
         $out = number_format($satoshis / self::SATOSHI, $places);
@@ -30,20 +36,6 @@ class CurrencyUtil
         return $out;
     }
 
-    public static function satoshisToUnFormattedNumber($satoshis, $places=null) {
-        if ($places === null) { $places = 8; }
-        $out = round($satoshis / self::SATOSHI, $places);
-        return $out;
-    } 
-
-    public static function addTwigFilters($twig) {
-        $filter = new \Twig_SimpleFilter('to_currency', function ($satoshis) {
-            return CurrencyUtil::satoshisToNumber($satoshis);
-        });
-        $twig->addFilter($filter);
-
-        return $twig;
-    }
 
 
     ////////////////////////////////////////////////////////////////////////
