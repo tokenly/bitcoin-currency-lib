@@ -37,6 +37,19 @@ class CurrencyUtil
     }
 
 
+    public static function valueToFormattedString($value, $places=null) {
+        if (!strlen($value)) { return $value; }
+        if ($places === null) { $places = 8; }
+        $out = number_format($value, $places);
+        if (strpos($out, '.') !== false) {
+            $out = rtrim($out, '0');
+            $out = rtrim($out, '.');
+        }
+
+        return $out;
+    }
+
+
 
     ////////////////////////////////////////////////////////////////////////
 
