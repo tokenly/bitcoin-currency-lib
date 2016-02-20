@@ -1,13 +1,13 @@
 {
     "name": "tokenly/bitcoin-currency-lib",
-    "description": "A simple bitcoin currency library",
+    "description": "A bitcoin currency and quantity value library",
     "type": "library",
     "license": "MIT",
     "authors": [
         {
             "name": "Devon Weller",
-            "email": "dweller@devonweller.com",
-            "homepage": "http://devonweller.com"
+            "email": "devon@tokenly.com",
+            "homepage": "http://tokenly.com"
         }
     ],
     "require": {
