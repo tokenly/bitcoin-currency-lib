@@ -14,6 +14,16 @@ class Quantity implements QuantityContract {
 
     protected $satoshis_qty = 0;
 
+
+    /**
+     * Create a new quantity from a float value
+     * @param  float $float_val a value
+     * @return Quantity a new Quantity object
+     */
+    public static function fromFloat($float_val) {
+        return new Quantity(CurrencyUtil::valueToSatoshis($float_val));
+    }
+
     /**
      * Create a new quantity
      * @param QuantityContract $mixed_value An integer amount in Satoshis, or another Quantity object
