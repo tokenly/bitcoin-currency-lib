@@ -2,9 +2,10 @@
 
 use Tokenly\CurrencyLib\Quantity;
 use Tokenly\CurrencyLib\CurrencyUtil;
-use \PHPUnit_Framework_Assert as PHPUnit;
+use \PHPUnit\Framework\Assert as PHPUnit;
+use PHPUnit\Framework\TestCase;
 
-class QuanitytTest extends PHPUnit_Framework_TestCase {
+class QuanitytTest extends TestCase {
 
     public function testQuantity() {
         $q1 = new Quantity(5);

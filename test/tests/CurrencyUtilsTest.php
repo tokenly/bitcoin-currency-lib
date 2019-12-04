@@ -1,9 +1,10 @@
 <?php
 
 use Tokenly\CurrencyLib\CurrencyUtil;
-use \PHPUnit_Framework_Assert as PHPUnit;
+use \PHPUnit\Framework\Assert as PHPUnit;
+use PHPUnit\Framework\TestCase;
 
-class CurrencyUtilsTest extends PHPUnit_Framework_TestCase {
+class CurrencyUtilsTest extends TestCase {
 
     public function testCurrentUtilsConversions() {
         // float value to satoshis
